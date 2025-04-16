@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-express-app
+spec:
+  selector:
+    app: flask-express-app
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http

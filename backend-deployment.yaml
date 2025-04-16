@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  selector:
+    matchLabels:
+      app: flask-express-app
+      tier: backend
+      track: stable
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: flask-express-app
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: flask-express-container
+          image: srilakshmiyannam/express-backend
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
