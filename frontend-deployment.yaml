@@ -20,3 +20,5 @@ spec:
         - name: flask-express-container
           image: srilakshmiyannam/flask-app
           imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
