@@ -18,9 +18,5 @@ spec:
     spec:
       containers:
         - name: flask-express-container
-          image: srilakshmiyannam/flask-frontend
+          image: srilakshmiyannam/flask-app
           imagePullPolicy: Always
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/usr/sbin/nginx","-s","quit"]
